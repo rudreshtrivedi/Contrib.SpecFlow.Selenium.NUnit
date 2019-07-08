@@ -2,11 +2,9 @@
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TechTalk.SpecFlow.Generator;
+using TechTalk.SpecFlow.Generator.CodeDom;
 using TechTalk.SpecFlow.Generator.UnitTestProvider;
-using TechTalk.SpecFlow.Infrastructure;
-using TechTalk.SpecFlow.Utils;
 
 namespace Baseclass.Contrib.SpecFlow.Selenium.NUnit
 {
@@ -209,5 +207,16 @@ namespace Baseclass.Contrib.SpecFlow.Selenium.NUnit
             generationContext.TestCleanupMethod.Statements.Add(new CodeSnippetStatement("            ScenarioContext.Current.Remove(\"Driver\");"));
             generationContext.TestCleanupMethod.Statements.Add(new CodeSnippetStatement("            ScenarioContext.Current.Remove(\"Container\");"));
         }
+
+        public UnitTestGeneratorTraits GetTraits()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetTestClassParallelize(TestClassGenerationContext generationContext)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }
